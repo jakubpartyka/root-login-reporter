@@ -42,7 +42,8 @@ notify('sudo monitor started ({host})'.format(host=hostname))
 
 while True:
     current_line = check()
-    if last_line != current_line:
+    if last_line != current_line:               # new sudo session detected
+        print('new sudo session detected: {details}'.format(details=current_line))
         last_line = current_line
         msg = 'new sudo session opened ({host})'.format(host=hostname)
         notify(msg)

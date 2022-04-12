@@ -12,4 +12,4 @@ RUN chmod +x /reporter.py
 # setup ufw
 # RUN apt-get install ufw -y;
 
-CMD ["python","/reporter.py","/auth.log"]
+CMD ["python","-u","/reporter.py","/auth.log"]
